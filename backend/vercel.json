@@ -14,7 +14,7 @@
   ],
   "env": {
     "MY_KEY": "this is the value",
-    "SECRET": "@my-secret-name"
+    "SECRET": "@my_secret_name"
   },
   "scope": "my-team",
   "alias": ["my-domain.com", "my-alias"]
