@@ -9,7 +9,13 @@ const cors = require('cors');
 const { default: mongoose } = require('mongoose');
 
 app.use(express.json()); //with the help of this request is automatically parsed through json
-app.use(cors()); // with the help of this react js app connect to express app on pot 4000
+app.use(cors(
+    {
+        origin:["https://deploy-mern-1whq.vercel.app"],
+        methods: ["POST","GET"},
+        credentials:true
+    }
+)); // with the help of this react js app connect to express app on pot 4000
 
 // Database connection
 mogoose.connect("mongodb+srv://mutursingh1111:abcd1234@cluster0.lqkvbbt.mongodb.net/node-project")
