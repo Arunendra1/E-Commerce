@@ -1,19 +1,21 @@
 {
-  "version":2,
-   "build" :[
-     { "src": "*.js","use" : "@vercel/node"}
-   ],
-  "routes":[
+  "version": 2,
+  "builds": [
     {
-      "src" : "/(.*)",
-      "dest" : "/"
+      "src": "*.js",
+      "use": "@vercel/node"
     }
   ],
-   "env": {
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
     "MY_KEY": "this is the value",
     "SECRET": "@my-secret-name"
-   },
-   "scope": "my-team",
-  "alias": ["my-domain.com", "my-alias"],
-  
+  },
+  "scope": "my-team",
+  "alias": ["my-domain.com", "my-alias"]
 }
